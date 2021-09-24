@@ -1,0 +1,104 @@
+.first img {
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 620px;
+}
+.sign {
+  height: 410px;
+  border-bottom: solid 1px rgb(218, 215, 215);
+}
+.sign-in {
+  margin-left: 500px;
+  border: solid 1px rgb(218, 215, 215);
+  height: 281px;
+  width: 350px;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+.sign-in h1 {
+  margin-left: 20px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+.sign-in p {
+  margin-left: 20px;
+  margin-bottom: 2px;
+}
+.sign-in label {
+  margin-left: 20px;
+  margin-top: 2px;
+  height: 25px;
+  width: 280px;
+}
+.sign-in .email {
+  margin-left: 20px;
+  margin-top: 2px;
+  height: 22px;
+  width: 280px;
+}
+.sign-in .sub {
+  margin-left: 20px;
+  margin-top: 12px;
+  height: 32px;
+  width: 290px;
+  background: rgb(247, 210, 142);
+  border: solid black thin;
+  border-radius: 3px;
+}
+.sign-in .para {
+  margin-left: 20px;
+  font-size: smaller;
+  margin-bottom: 25px;
+  text-decoration: none;
+}
+.sign-in .icon {
+  background-image: url(https://m.media-amazon.com/images/S/sash/mPGmT0r6IeTyIee.png);
+}
+.sign-in .help {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.second h4 {
+  text-align: center;
+  font-weight: 400;
+  font-size: smaller;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.second .app-link {
+  margin-left: 500px;
+  border: solid black;
+  margin-top: 5px;
+  background-color: rgb(253, 239, 221);
+  border-width: thin;
+  border-radius: 3px;
+  padding: 4px 72px 6px 72px;
+  text-decoration: none;
+  color: black;
+}
+.app-third {
+  margin-top: 30px;
+  display: flex;
+  font-size: smaller;
+}
+.app-third .app-condition {
+  margin-left: 550px;
+  margin-right: 15px;
+}
+.app-third .app-privacy {
+  margin-right: 15px;
+}
+.app-third a {
+  text-decoration: none;
+}
+.app-fourth {
+  margin-top: 11px;
+  margin-left: 555px;
+  font-weight: 400;
+  font-size: 11px;
+}
+a {
+  text-decoration: none;
+  color: rgb(8, 140, 216);
+}

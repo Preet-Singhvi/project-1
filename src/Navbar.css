@@ -1,0 +1,166 @@
+.logo img {
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 630px;
+}
+.create-form {
+  height: 590px;
+  border-bottom: solid 1px rgb(219, 219, 219);
+}
+.sign-up {
+  border: solid 1px rgb(219, 219, 219);
+  height: 560px;
+  width: 350px;
+  margin-left: 500px;
+  margin-top: 20px;
+  border-radius: 3px;
+}
+.sign-up h3 {
+  margin-left: 20px;
+  margin-top: 15px;
+  font-size: x-large;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.sign-up .name-label {
+  margin-left: 20px;
+  font-weight: 500;
+}
+.sign-up .name-input {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  height: 25px;
+  width: 304px;
+}
+.sign-up .number-label {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.sign-up .numbers .number-select {
+  margin-left: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  border: 2px solid black;
+  border-width: thin;
+  height: 30px;
+  width: 84px;
+  border-radius: 3px;
+}
+.sign-up .number-input {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  height: 25px;
+  width: 200px;
+}
+.sign-up .email-label {
+  margin-left: 20px;
+  font-weight: 500;
+}
+.sign-up .email-input {
+  margin-left: 20px;
+  height: 25px;
+  width: 304px;
+  margin-bottom: 20px;
+}
+.sign-up .password-label {
+  margin-left: 20px;
+  font-weight: 500;
+}
+.sign-up .password-input {
+  margin-top: 0px;
+  margin-left: 20px;
+  height: 25px;
+  width: 304px;
+  margin-bottom: 3px;
+}
+.image {
+  display: flex;
+  margin-bottom: 20px;
+}
+.image img {
+  margin-left: 20px;
+  height: 11px;
+  width: 11px;
+  align-items: center;
+  margin-top: 7px;
+}
+.image h6 {
+  margin-left: 7px;
+  font-weight: 450;
+  font-size: 13px;
+  padding-bottom: 4px;
+  margin-top: 3px;
+  margin-bottom: 1px;
+}
+.info {
+  margin-bottom: 20px;
+}
+.info h5 {
+  margin-left: 20px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.info .message {
+  margin-top: 3px;
+  margin-left: 20px;
+}
+.sign-up .submit {
+  margin-left: 20px;
+  height: 30px;
+  width: 310px;
+  margin-bottom: 30px;
+  background: rgb(247, 210, 142);
+  border: solid black thin;
+  border-radius: 3px;
+}
+.account {
+  display: flex;
+}
+.account h5 {
+  margin-left: 20px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 2px;
+  margin-top: 1px;
+}
+.account .sign-in {
+  margin-left: 5px;
+  font-size: 13px;
+  margin-top: 0;
+  height: 15px;
+  width: 100px;
+  border: white;
+}
+.business {
+  display: flex;
+}
+.business h5 {
+  margin-left: 20px;
+  font-weight: 500;
+  margin-top: 2px;
+}
+.business .business-account {
+  margin-left: 5px;
+  font-size: 13px;
+}
+.third {
+  margin-top: 30px;
+  display: flex;
+  font-size: smaller;
+  margin-bottom: 0;
+}
+.third .condition {
+  margin-left: 560px;
+  margin-right: 15px;
+}
+.third .privacy {
+  margin-right: 15px;
+}
+.fourth {
+  margin-top: 11px;
+  margin-left: 570px;
+  font-weight: 400;
+  font-size: 11px;
+}
