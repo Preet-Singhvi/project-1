@@ -12,16 +12,17 @@ function App(){
   const [cartItems,setCartItems] = useState([])
   
   const handleAddProduct = ( listItem ) => {
-    console.log(listItem)
-    
+    console.log(listItem)   
     const ProductExist = cartItems.find((object) => object.id === listItem.id)
     let qty = 1;
     if(ProductExist){
       setCartItems(cartItems.map((object) => object.id === listItem.id ?
-      {...ProductExist, qty: ProductExist.qty + 1}: object)
+      {...ProductExist, qty: ProductExist.qty + 1}: object),
+      localStorage.setItem('setCartItems',JSON.stringify(cartItems))             
       );
     }  else{
-      setCartItems([...cartItems,{...listItem,qty:1} ])
+      setCartItems([...cartItems,{...listItem,qty:1} ]),
+        localStorage.setItem('setCartItems',JSON.stringify(cartItems))
     }
     console.log(cartItems)
   };
