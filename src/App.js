@@ -1,31 +1,63 @@
-import Navbar from "./Navbar";
-import { Route, Router, Switch } from "react-router";
+import Register from "./Navbar";
+import { Route, Switch } from "react-router";
 import Sign_in from "./sign-in";
 import Password from "./password";
 import Forgot from "./forgot";
 import Home from "./home-page";
 import Cart from "./Cart";
-import { useState } from 'react';
 import React from 'react';
+import { useEffect } from "react";
 
 function App(){
-  const [cartItems,setCartItems] = useState([])
+  const cartItems = JSON.parse(localStorage.getItem("setCartItems")) ?? [];
+
+  useEffect(() => {
+    console.log("hi")
+  },[cartItems])
   
+  function arrayRemove(arr,value){
+    return arr.filter(function(object){
+      return object.id !== value.id
+    })
+  }
+
   const handleAddProduct = ( listItem ) => {
-    console.log(listItem)   
-    const ProductExist = cartItems.find((object) => object.id === listItem.id)
-    let qty = 1;
-    if(ProductExist){
-      setCartItems(cartItems.map((object) => object.id === listItem.id ?
-      {...ProductExist, qty: ProductExist.qty + 1}: object),
-      localStorage.setItem('setCartItems',JSON.stringify(cartItems))             
-      );
-    }  else{
-      setCartItems([...cartItems,{...listItem,qty:1} ]),
+      const ProductExist = cartItems.find((product) => product.id === listItem.id)
+      if(ProductExist){
+        cartItems.map((product) => 
+        product.id === listItem.id ?(product.qty += 1): product
+        );
         localStorage.setItem('setCartItems',JSON.stringify(cartItems))
-    }
-    console.log(cartItems)
+      }  else{
+         listItem["qty"] = 1;
+         cartItems.push(listItem);
+         localStorage.setItem('setCartItems',JSON.stringify(cartItems)) 
+        }
   };
+
+  const handleRemove = (objects) => {
+     arrayRemove(cartItems,objects)
+     localStorage.setItem('setCartItems',JSON.stringify(cartItems))
+  }
+
+  const handleAdd = (objects) => {
+     cartItems.map((product) => 
+        product.id === objects.id ?(product.qty += 1): product
+        );
+        localStorage.setItem('setCartItems',JSON.stringify(cartItems))
+  }
+
+  const handleReduce = (objects) => {
+      if(objects.qty === 1){
+        cartItems.filter((object) => object.id !== objects.id)
+        localStorage.setItem('setCartItems',JSON.stringify(cartItems)) } 
+      else{
+        cartItems.map((product) => 
+        product.id === objects.id ?(product.qty -= 1): product
+        );
+        localStorage.setItem('setCartItems',JSON.stringify(cartItems))
+      }  
+  }
 
   return ( 
     <Switch>
@@ -33,16 +65,21 @@ function App(){
           <Sign_in />
         </Route>
         <Route path="/sign-up">
-          <Navbar />
+          <Register />
         </Route>
         <Route path="/password">
           <Password />
         </Route>
-        <Route path="/forgot-password">
+        <Route exact path="/forgot-password">
           <Home handleAddProduct= { handleAddProduct }/>
         </Route>
         <Route path="/cart">
-          <Cart cartItems={ cartItems } handleAddProduct= { handleAddProduct }/>
+          <Cart 
+          cartItems={ cartItems } 
+          handleAddProducts= { handleAddProduct } 
+          handleRemove = { handleRemove }
+          handleAdd = { handleAdd } 
+          handleReduce = { handleReduce }/>
         </Route>
        </Switch>
     
